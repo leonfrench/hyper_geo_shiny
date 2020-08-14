@@ -1,7 +1,7 @@
 library(shiny)
 
 prettyPrint <- function(frontstring, q, value){
-  format <- if(value < 0.00001) '%.3e' else '%.3f'
+  format <- if(value < 0.001) '%.3e' else '%.3f'
   cat(sprintf(paste(frontstring,format, "\n"), q, value))
 }
 
@@ -29,7 +29,8 @@ shinyServer(function(input, output) {
     prettyPrint("X > %i, p = ", q, phyper(q, m, n, k, lower.tail = FALSE))
     prettyPrint("X >= %i, p = ", q, phyper(q, m, n, k, lower.tail = FALSE)  + dhyper(x, m, n, k))
     
-  
+    cat(sprintf("\nCode at: https://github.com/leonfrench/hyper_geo_shiny"))
+    
     
     #dhyper(input$successes, input$successesInPop, input$pop - input$successesInPop, input$sampleSize)
     #x <- sprintf("X = %i, p = %e\n", input$successes,dhyper(input$successes, input$successesInPop, input$pop - input$successesInPop, input$sampleSize))
