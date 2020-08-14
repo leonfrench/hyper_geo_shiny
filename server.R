@@ -1,7 +1,7 @@
 library(shiny)
 
 prettyPrint <- function(frontstring, q, value){
-  format <- if(value < 0.001) '%.3e' else '%.3f'
+  format <- if(value < 0.01) '%.3e' else '%.3f'
   cat(sprintf(paste(frontstring,format, "\n"), q, value))
 }
 

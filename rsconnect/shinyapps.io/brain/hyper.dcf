@@ -1,0 +1,13 @@
+name: hyper
+title: hyper
+username:
+account: brain
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 38617
+bundleId: 3516316
+url: https://brain.shinyapps.io/hyper/
+when: 1597416541.75734
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: z/.DS_Store|z/rsconnect/shinyapps.io/brain/hyper.dcf|z/shinyappsz/.DS_Store
